@@ -66,28 +66,199 @@ h1 {
     height: 52px;
     border-radius: 10px;
     cursor: pointer;
-    background-image: url("../assets/logo/search-logo-grey.svg");
+    background-image: url("../assets/icons/search-logo-grey.svg");
     transition: background-image 0.3s ease-in-out;
 }
 
+.search-close-btn {
+    position: absolute;
+    width: 13px;
+    top: 60px;
+    right: 85px;
+    cursor: pointer;
+}
+
 .btn-search:hover {
-    background-image: url("../assets/logo/search-logo-yellow.svg");
+    background-image: url("../assets/icons/search-logo-yellow.svg");
 }
 
 /* MENU SELECT */
+main {
+    max-width: 1284px;
+    margin: auto;
+}
 
 .filtres {
-    height: 132px;
+    position: relative;
+    height: 40px;
+    margin: 20px 24px 20px 24px;
+    display: flex;
+}
+
+.dropdown {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    max-height: 50px;
+    cursor: pointer;
+    border-radius: 11px;
+    background: #FFF;
+    color: var(--Black);
+    font-family: Manrope;
+    z-index: 3;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    margin-right: 82px;
+}
+
+.dropdown-ingredients{
+    top: 0;
+    left: 0;
+}
+
+.dropdown-appareils{
+    top: 0;
+    left: 280px;
+}
+
+.dropdown-ustensils{
+    top: 0;
+    left: 560px;
+}
+
+.dropdown:hover, .dropdown:focus-within {
+    max-height: 315px;
+    .dropdown-icon {
+        transform: rotate(180deg);
+    }
+}
+
+.dropdown-title {
+    padding: 17px 16px 0 16px;
+    font-family: Manrope;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.dropdown-search-bar{
+    margin-left: 16px;
+    margin-right: 16px;
+    font-family: Manrope;
+    margin-top: 14px;
+    margin-bottom: 11px;
+    padding: 8px;
+    height: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--Grey);
+    border: #C6C6C6 1px solid;
+    border-radius: 3px;
+}
+
+.dropdown-search-icon {
+    height: 18px;
+    position: absolute;
+    top: 62px;
+    right: 25px;
+}
+
+.dropdown-close-icon {
+    height: 8px;
+    position: absolute;
+    top: 68px;
+    right: 55px;
+}
+
+.dropdown-element-tag-list {
+    margin-bottom: 8px;
+}
+
+.dropdown-element-tag {
+    position: relative;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: var(--Yellow);
+    margin: 0;
+    padding: 9px 0 9px 16px;
+    border-bottom: 2px solid #FFF;
+    transition: font-weight 0.3s ease-in-out;
+}
+
+.dropdown-element-tag-close-btn {
+    opacity: 0;
+    position: absolute;
+    width: 15px;
+    height: auto;
+    top: 11px;
+    right: 14px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.dropdown-element-tag:hover {
+    font-weight: 700;
+    .dropdown-element-tag-close-btn {
+        opacity: 1;
+    }
+}
+
+.dropdown-element-list {
+    padding: 0 16px 0 16px;
+}
+
+.dropdown-element {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 13px 0 0 0;
+}
+
+.dropdown-element:hover {
+    font-weight: 700;
+}
+
+.nb-recettes {
+    position: absolute;
+    top: -13px;
+    right: 0;
+    color: var(--Black);
+    font-family: Anton;
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.tags-filter {
+    margin: 0 24px 30px 24px;
+}
+
+.tags-item {
+    display: inline-flex;
+    padding: 17px 18px;
+    margin-right: 10px;
+    align-items: center;
+    gap: 60px;
+    border-radius: 10px;
+    background: var(--Yellow);
+    font-family: Manrope;
+    font-size: 14px;
+}
+
+.close-tag-btn {
+    cursor: pointer;
 }
 
 /* RECETTES */
 .bloc-recettes{
-
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .recette-card {
     width: 380px;
     height: 731px;
+    margin: 0 24px 66px 24px;
     border-radius: 21px;
     background: #FFF;
     box-shadow: 0px 4px 34px 30px rgba(0, 0, 0, 0.04);
@@ -143,6 +314,35 @@ h1 {
 
 .recette-instructions {
     color: var(--Black);
+    font-family: Manrope;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.recette-ingredients-title {
+    margin: 32px 0 15px 0;
+}
+
+.recette-ingredients-bloc {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.recette-ingredients-item {
+    width: 50%;
+    
+}
+
+.recette-ingredient-item-title {
+    margin: 0;
+    font-family: Manrope;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.recette-ingredients-item-quantite{
+    margin: 0 0 21px 0;
+    color: var(--Grey);
     font-family: Manrope;
     font-size: 14px;
 }
