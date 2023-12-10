@@ -1,9 +1,52 @@
-<mxfile host="app.diagrams.net" modified="2023-12-08T20:46:56.017Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" version="22.1.7" etag="MYUaPxAzITUolv0Y2JuE" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-10T11:32:32.895Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="5h_YqClJNYIclfBAsjsh" version="22.1.7" type="github">
   <diagram name="Page-1" id="r4HgYfRCgoHrCfJZUgXy">
-    <mxGraphModel>
+    <mxGraphModel dx="1217" dy="1093" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="L4QYTUJZ_KFNhh87ykTk-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="L4QYTUJZ_KFNhh87ykTk-1" target="L4QYTUJZ_KFNhh87ykTk-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="L4QYTUJZ_KFNhh87ykTk-1" value="L&#39;utilisateur entre un caractère" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="345" y="30" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="L4QYTUJZ_KFNhh87ykTk-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="L4QYTUJZ_KFNhh87ykTk-2" target="L4QYTUJZ_KFNhh87ykTk-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="270" y="60" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="300" y="145" />
+              <mxPoint x="300" y="50" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="L4QYTUJZ_KFNhh87ykTk-4" value="NO" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="L4QYTUJZ_KFNhh87ykTk-3">
+          <mxGeometry x="0.05" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="L4QYTUJZ_KFNhh87ykTk-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="L4QYTUJZ_KFNhh87ykTk-2" target="L4QYTUJZ_KFNhh87ykTk-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="L4QYTUJZ_KFNhh87ykTk-8" value="YES" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="L4QYTUJZ_KFNhh87ykTk-7">
+          <mxGeometry x="-0.0857" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="L4QYTUJZ_KFNhh87ykTk-2" value="nb caractères&lt;br&gt;&amp;nbsp;&amp;gt; 2" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="110" width="110" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="L4QYTUJZ_KFNhh87ykTk-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="L4QYTUJZ_KFNhh87ykTk-2" target="L4QYTUJZ_KFNhh87ykTk-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="L4QYTUJZ_KFNhh87ykTk-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="L4QYTUJZ_KFNhh87ykTk-6" target="L4QYTUJZ_KFNhh87ykTk-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="L4QYTUJZ_KFNhh87ykTk-6" value="Recherche dans TITRES de chaques recettes" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="354" y="230" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="L4QYTUJZ_KFNhh87ykTk-9" value="Correspondance Trouvée ?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="349" y="320" width="130" height="80" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
