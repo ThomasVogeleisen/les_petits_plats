@@ -1,314 +1,93 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="scripts/recettes.js" defer></script>
-    <title>Les petits plats</title>
-</head>
-<body>
-    <header>
-        <!-- LOGO -->
-        <div class="bloc-logo">
-            <img src="assets/logo/logo.svg" alt="Les petits plats Logo">
-        </div>
-        <h1>CHERCHEZ PARMI PLUS DE 1500 RECETTES<br>DU QUOTIDIEN,SIMPLES ET DÉLICIEUSES</h1>
-        <!-- BARRE DE RECHERCHE -->
-        <div class="bloc-search-bar">
-            <form action="#">
-                <label for="search-bar"></label>
-                <input type="text" id="search-bar" placeholder="Rechercher une recette, un ingrédient, ...">
-                <input class="btn-search" type="submit" value="">
-                <img class="search-close-btn" src="../assets/icons/close.svg" alt="search icone">
-            </form>
-        </div>
-    </header>
+    <head>
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Les petits plats</title>
+    </head>
+    <body>
+        <header>
+            <!-- LOGO -->
+            <div class="bloc-logo">
+                <img src="assets/logo/logo.svg" alt="Les petits plats Logo">
+            </div>
+            <h1>CHERCHEZ PARMI PLUS DE 1500 RECETTES<br>DU QUOTIDIEN,SIMPLES ET DÉLICIEUSES</h1>
+            <!-- BARRE DE RECHERCHE -->
+            <div class="bloc-search-bar">
+                <form action="#">
+                    <label for="search-bar"></label>
+                    <input type="text" id="search-bar" placeholder="Rechercher une recette, un ingrédient, ...">
+                    <input class="btn-search" type="submit" value="">
+                    <img class="search-close-btn" src="../assets/icons/close.svg" alt="search icone">
+                </form>
+            </div>
+        </header>
 
-    <main>
-        <!-- FILTRES -->
-        <section class="filtres">
-            <div class="dropdown dropdown-ingredients">
-                    <h2 class="dropdown-title">Ingrédients <img class="dropdown-icon" src="assets/icons/dropdown_ico.svg" alt="dropdown icone"></h2>
+        <main>
+            <!-- FILTRES -->
+            <section class="filtres">
+                <!-- Ingrédients -->
+                <div class="dropdown dropdown-ingredients">
+                        <h2 class="dropdown-title">Ingrédients <img class="dropdown-icon" src="assets/icons/dropdown_ico.svg" alt="dropdown icone"></h2>
+                        <input class="dropdown-search-bar" type="text">
+                        <img class="dropdown-search-icon" src="../assets/icons/dopdown-loupe.svg" alt="search icone">
+                        <img class="dropdown-close-icon" src="../assets/icons/close.svg" alt="search icone">
+                        <!-- tag list -->
+                        <div class="dropdown-element-tag-list">
+                            <p class="dropdown-element-tag">lorem<img class="dropdown-element-tag-close-btn" src="../assets/icons/close-tag-black.svg" alt="delete tag"></p>
+                        </div>
+                        <!-- element list -->
+                        <div class="dropdown-element-list">
+                            <p class="dropdown-element">lorem</p>
+                        </div>
+                </div>
+                <!-- Appareils -->
+                <div class="dropdown dropdown-appareils">
+                        <h2 class="dropdown-title">Appareils <img class="dropdown-icon" src="assets/icons/dropdown_ico.svg" alt="dropdown icone"></h2>
+                        <input class="dropdown-search-bar" type="text">
+                        <img class="dropdown-search-icon" src="../assets/icons/dopdown-loupe.svg" alt="search icone">
+                        <img class="dropdown-close-icon" src="../assets/icons/close.svg" alt="search icone">
+                        <div class="dropdown-element-tag-list">
+                            <p class="dropdown-element-tag">lorem<img class="dropdown-element-tag-close-btn" src="../assets/icons/close-tag-black.svg" alt="delete tag"></p>
+                        </div>
+                        <div class="dropdown-element-list">
+                            <p class="dropdown-element">lorem</p>
+                        </div>
+                </div>
+                <!-- Ustensils -->
+                <div class="dropdown dropdown-ustensils">
+                    <h2 class="dropdown-title">Ustensils <img class="dropdown-icon" src="assets/icons/dropdown_ico.svg" alt="dropdown icone"></h2>
                     <input class="dropdown-search-bar" type="text">
                     <img class="dropdown-search-icon" src="../assets/icons/dopdown-loupe.svg" alt="search icone">
                     <img class="dropdown-close-icon" src="../assets/icons/close.svg" alt="search icone">
                     <div class="dropdown-element-tag-list">
-                        <p class="dropdown-element-tag">Poulet<img class="dropdown-element-tag-close-btn" src="../assets/icons/close-tag-black.svg" alt="delete tag"></p>
+                        <p class="dropdown-element-tag">lorem<img class="dropdown-element-tag-close-btn" src="../assets/icons/close-tag-black.svg" alt="delete tag"></p>
                     </div>
                     <div class="dropdown-element-list">
-                        <p class="dropdown-element">Jus de citron</p>
-                        <p class="dropdown-element">glaçons</p>
-                        <p class="dropdown-element">Tomates</p>
-                        <p class="dropdown-element">Poulet</p>
-                        <p class="dropdown-element">Poulet</p>
-                        <p class="dropdown-element">Poulet</p>
-                        <p class="dropdown-element">Poulet</p>
-                        <p class="dropdown-element">Poulet</p>
-                        <p class="dropdown-element">Poulet</p>
-                        <p class="dropdown-element">Poulet</p>
-                        <p class="dropdown-element">Poulet</p>
-                        <p class="dropdown-element">Poulet</p>
-                        <p class="dropdown-element">fin</p>
+                        <p class="dropdown-element">lorem</p>
                     </div>
-            </div>
-            <div class="dropdown dropdown-appareils">
-                    <h2 class="dropdown-title">Appareils <img class="dropdown-icon" src="assets/icons/dropdown_ico.svg" alt="dropdown icone"></h2>
-                    <input class="dropdown-search-bar" type="text">
-                    <img class="dropdown-search-icon" src="../assets/icons/dopdown-loupe.svg" alt="search icone">
-                    <img class="dropdown-close-icon" src="../assets/icons/close.svg" alt="search icone">
-                    <div class="dropdown-element-tag-list">
-                        <p class="dropdown-element-tag">Poulet<img class="dropdown-element-tag-close-btn" src="../assets/icons/close-tag-black.svg" alt="delete tag"></p>
-                    </div>
-                    <div class="dropdown-element-list">
-                        <p class="dropdown-element">Jus de citron</p>
-                        <p class="dropdown-element">glaçons</p>
-                        <p class="dropdown-element">Tomates</p>
-                        <p class="dropdown-element">Poulet</p>
-                        <p class="dropdown-element">Poulet</p>
-                        <p class="dropdown-element">Poulet</p>
-                        <p class="dropdown-element">Poulet</p>
-                        <p class="dropdown-element">Poulet</p>
-                        <p class="dropdown-element">Poulet</p>
-                        <p class="dropdown-element">Poulet</p>
-                        <p class="dropdown-element">Poulet</p>
-                        <p class="dropdown-element">Poulet</p>
-                        <p class="dropdown-element">fin</p>
-                    </div>
-            </div>
-            <div class="dropdown dropdown-ustensils">
-                <h2 class="dropdown-title">Ustensils <img class="dropdown-icon" src="assets/icons/dropdown_ico.svg" alt="dropdown icone"></h2>
-                <input class="dropdown-search-bar" type="text">
-                <img class="dropdown-search-icon" src="../assets/icons/dopdown-loupe.svg" alt="search icone">
-                <img class="dropdown-close-icon" src="../assets/icons/close.svg" alt="search icone">
-                <div class="dropdown-element-tag-list">
-                    <p class="dropdown-element-tag">Poulet<img class="dropdown-element-tag-close-btn" src="../assets/icons/close-tag-black.svg" alt="delete tag"></p>
                 </div>
-                <div class="dropdown-element-list">
-                    <p class="dropdown-element">Jus de citron</p>
-                    <p class="dropdown-element">glaçons</p>
-                    <p class="dropdown-element">Tomates</p>
-                    <p class="dropdown-element">Poulet</p>
-                    <p class="dropdown-element">Poulet</p>
-                    <p class="dropdown-element">Poulet</p>
-                    <p class="dropdown-element">Poulet</p>
-                    <p class="dropdown-element">Poulet</p>
-                    <p class="dropdown-element">Poulet</p>
-                    <p class="dropdown-element">Poulet</p>
-                    <p class="dropdown-element">Poulet</p>
-                    <p class="dropdown-element">Poulet</p>
-                    <p class="dropdown-element">fin</p>
-                </div>
-            </div>
-            <p class="nb-recettes"><span>03</span> recettes</p>
-        </section>
-        <!-- TAGS -->
-        <section class="tags-filter">
-            <p class="tags-item">Crème de coco <img class="close-tag-btn" src="../assets/icons/close-tag.svg" alt="search icone"></p>
-            <p class="tags-item">Crème de coco <img class="close-tag-btn" src="../assets/icons/close-tag.svg" alt="search icone"></p>
-        </section>
+                <!-- number of recipes -->
+                <p class="nb-recettes"><span class="numberOfResults">00</span> recettes</p>
+            </section>
 
-        <!-- SECTION RECETTES -->
-        <section class="bloc-recettes">
+            <!-- TAGS -->
+            <section class="tags-filter">
+                <p class="tags-item">lorem <img class="close-tag-btn" src="../assets/icons/close-tag.svg" alt="search icone"></p>
+            </section>
 
-            <!-- CARTE RECETTE -->
-            <article class="recette-card">
-                <!-- IMAGE -->
-                <div class="recette-card-img">
-                    <img class="img-recette" src="assets/images/Recette01.jpg" alt="Photo de la recette">
-                    <span class="recette-time">10min</span>
-                </div>
-                <!-- CONTENU -->
-                <div class="recette-card-content">
-                    <!-- RECETTE -->
-                    <h2 class="recette-title">Limonade de Coco</h2>
-                    <h3 class="recette-instructions-title">recette</h3>
-                    <p class="recette-instructions">Mettre les glaçons à votre goût dans le blender, Ajouter le lait  la crème de coco, le jus de 2 citrons et le sucre ensemble. Mixer jusqu'à obtenir la consistance désirée.</p>
-                    <!-- INGREDIENTS -->
-                    <h3 class="recette-ingredients-title">Ingrédients</h3>
-                    <div class="recette-ingredients-bloc">
-                        <div class="recette-ingredients-item">
-                            <h4 class="recette-ingredient-item-title">Reblochon</h4>
-                            <p class="recette-ingredients-item-quantite">1</p>
-                        </div>
-                        <div class="recette-ingredients-item">
-                            <h4 class="recette-ingredient-item-title">Jambon fumé</h4>
-                            <p class="recette-ingredients-item-quantite">2tranches</p>
-                        </div>
-                        <div class="recette-ingredients-item">
-                            <h4 class="recette-ingredient-item-title">Vin blanc sec</h4>
-                            <p class="recette-ingredients-item-quantite">30cl</p>
-                        </div>
-                        <div class="recette-ingredients-item">
-                            <h4 class="recette-ingredient-item-title">Pommes de terre</h4>
-                            <p class="recette-ingredients-item-quantite">4,5kg</p>
-                        </div>
-                        <div class="recette-ingredients-item">
-                            <h4 class="recette-ingredient-item-title">Oignon</h4>
-                            <p class="recette-ingredients-item-quantite">300grammes</p>
-                        </div>
-
-                    </div>
-                </div>
-            </article>
-            <article class="recette-card">
-                <!-- IMAGE -->
-                <div class="recette-card-img">
-                    <img class="img-recette" src="assets/images/Recette01.jpg" alt="Photo de la recette">
-                    <span class="recette-time">10min</span>
-                </div>
-                <!-- CONTENU -->
-                <div class="recette-card-content">
-                    <!-- RECETTE -->
-                    <h2 class="recette-title">Limonade de Coco</h2>
-                    <h3 class="recette-instructions-title">recette</h3>
-                    <p class="recette-instructions">Mettre les glaçons à votre goût dans le blender, Ajouter le lait  la crème de coco, le jus de 2 citrons et le sucre ensemble. Mixer jusqu'à obtenir la consistance désirée.</p>
-                    <!-- INGREDIENTS -->
-                    <h3 class="recette-ingredients-title">Ingrédients</h3>
-                    <div class="recette-ingredients-bloc">
-                        <div class="recette-ingredients-item">
-                            <h4 class="recette-ingredient-item-title">Reblochon</h4>
-                            <p class="recette-ingredients-item-quantite">1</p>
-                        </div>
-                        <div class="recette-ingredients-item">
-                            <h4 class="recette-ingredient-item-title">Jambon fumé</h4>
-                            <p class="recette-ingredients-item-quantite">2tranches</p>
-                        </div>
-                        <div class="recette-ingredients-item">
-                            <h4 class="recette-ingredient-item-title">Vin blanc sec</h4>
-                            <p class="recette-ingredients-item-quantite">30cl</p>
-                        </div>
-                        <div class="recette-ingredients-item">
-                            <h4 class="recette-ingredient-item-title">Pommes de terre</h4>
-                            <p class="recette-ingredients-item-quantite">4,5kg</p>
-                        </div>
-                        <div class="recette-ingredients-item">
-                            <h4 class="recette-ingredient-item-title">Oignon</h4>
-                            <p class="recette-ingredients-item-quantite">300grammes</p>
-                        </div>
-
-                    </div>
-                </div>
-            </article>
-            <article class="recette-card">
-                <!-- IMAGE -->
-                <div class="recette-card-img">
-                    <img class="img-recette" src="assets/images/Recette01.jpg" alt="Photo de la recette">
-                    <span class="recette-time">10min</span>
-                </div>
-                <!-- CONTENU -->
-                <div class="recette-card-content">
-                    <!-- RECETTE -->
-                    <h2 class="recette-title">Limonade de Coco</h2>
-                    <h3 class="recette-instructions-title">recette</h3>
-                    <p class="recette-instructions">Mettre les glaçons à votre goût dans le blender, Ajouter le lait  la crème de coco, le jus de 2 citrons et le sucre ensemble. Mixer jusqu'à obtenir la consistance désirée.</p>
-                    <!-- INGREDIENTS -->
-                    <h3 class="recette-ingredients-title">Ingrédients</h3>
-                    <div class="recette-ingredients-bloc">
-                        <div class="recette-ingredients-item">
-                            <h4 class="recette-ingredient-item-title">Reblochon</h4>
-                            <p class="recette-ingredients-item-quantite">1</p>
-                        </div>
-                        <div class="recette-ingredients-item">
-                            <h4 class="recette-ingredient-item-title">Jambon fumé</h4>
-                            <p class="recette-ingredients-item-quantite">2tranches</p>
-                        </div>
-                        <div class="recette-ingredients-item">
-                            <h4 class="recette-ingredient-item-title">Vin blanc sec</h4>
-                            <p class="recette-ingredients-item-quantite">30cl</p>
-                        </div>
-                        <div class="recette-ingredients-item">
-                            <h4 class="recette-ingredient-item-title">Pommes de terre</h4>
-                            <p class="recette-ingredients-item-quantite">4,5kg</p>
-                        </div>
-                        <div class="recette-ingredients-item">
-                            <h4 class="recette-ingredient-item-title">Oignon</h4>
-                            <p class="recette-ingredients-item-quantite">300grammes</p>
-                        </div>
-
-                    </div>
-                </div>
-            </article>
-            <article class="recette-card">
-                <!-- IMAGE -->
-                <div class="recette-card-img">
-                    <img class="img-recette" src="assets/images/Recette01.jpg" alt="Photo de la recette">
-                    <span class="recette-time">10min</span>
-                </div>
-                <!-- CONTENU -->
-                <div class="recette-card-content">
-                    <!-- RECETTE -->
-                    <h2 class="recette-title">Limonade de Coco</h2>
-                    <h3 class="recette-instructions-title">recette</h3>
-                    <p class="recette-instructions">Mettre les glaçons à votre goût dans le blender, Ajouter le lait  la crème de coco, le jus de 2 citrons et le sucre ensemble. Mixer jusqu'à obtenir la consistance désirée.</p>
-                    <!-- INGREDIENTS -->
-                    <h3 class="recette-ingredients-title">Ingrédients</h3>
-                    <div class="recette-ingredients-bloc">
-                        <div class="recette-ingredients-item">
-                            <h4 class="recette-ingredient-item-title">Reblochon</h4>
-                            <p class="recette-ingredients-item-quantite">1</p>
-                        </div>
-                        <div class="recette-ingredients-item">
-                            <h4 class="recette-ingredient-item-title">Jambon fumé</h4>
-                            <p class="recette-ingredients-item-quantite">2tranches</p>
-                        </div>
-                        <div class="recette-ingredients-item">
-                            <h4 class="recette-ingredient-item-title">Vin blanc sec</h4>
-                            <p class="recette-ingredients-item-quantite">30cl</p>
-                        </div>
-                        <div class="recette-ingredients-item">
-                            <h4 class="recette-ingredient-item-title">Pommes de terre</h4>
-                            <p class="recette-ingredients-item-quantite">4,5kg</p>
-                        </div>
-                        <div class="recette-ingredients-item">
-                            <h4 class="recette-ingredient-item-title">Oignon</h4>
-                            <p class="recette-ingredients-item-quantite">300grammes</p>
-                        </div>
-
-                    </div>
-                </div>
-            </article>
-            <article class="recette-card">
-                <!-- IMAGE -->
-                <div class="recette-card-img">
-                    <img class="img-recette" src="assets/images/Recette01.jpg" alt="Photo de la recette">
-                    <span class="recette-time">10min</span>
-                </div>
-                <!-- CONTENU -->
-                <div class="recette-card-content">
-                    <!-- RECETTE -->
-                    <h2 class="recette-title">Limonade de Coco</h2>
-                    <h3 class="recette-instructions-title">recette</h3>
-                    <p class="recette-instructions">Mettre les glaçons à votre goût dans le blender, Ajouter le lait  la crème de coco, le jus de 2 citrons et le sucre ensemble. Mixer jusqu'à obtenir la consistance désirée.</p>
-                    <!-- INGREDIENTS -->
-                    <h3 class="recette-ingredients-title">Ingrédients</h3>
-                    <div class="recette-ingredients-bloc">
-                        <div class="recette-ingredients-item">
-                            <h4 class="recette-ingredient-item-title">Reblochon</h4>
-                            <p class="recette-ingredients-item-quantite">1</p>
-                        </div>
-                        <div class="recette-ingredients-item">
-                            <h4 class="recette-ingredient-item-title">Jambon fumé</h4>
-                            <p class="recette-ingredients-item-quantite">2tranches</p>
-                        </div>
-                        <div class="recette-ingredients-item">
-                            <h4 class="recette-ingredient-item-title">Vin blanc sec</h4>
-                            <p class="recette-ingredients-item-quantite">30cl</p>
-                        </div>
-                        <div class="recette-ingredients-item">
-                            <h4 class="recette-ingredient-item-title">Pommes de terre</h4>
-                            <p class="recette-ingredients-item-quantite">4,5kg</p>
-                        </div>
-                        <div class="recette-ingredients-item">
-                            <h4 class="recette-ingredient-item-title">Oignon</h4>
-                            <p class="recette-ingredients-item-quantite">300grammes</p>
-                        </div>
-
-                    </div>
-                </div>
-            </article>
-        </section>
-    </main>
-</body>
+            <!-- SECTION RECETTES -->
+            <section class="bloc-recettes">
+            </section>
+        </main>
+        <!-- SCRIPS -->
+        <!-- Liste des recettes -->
+        <script src="scripts/recettes/recettes.js"></script>
+        <!-- Templates -->
+        <script src="scripts/templates/ficheRecette.js"></script>
+        <!-- Script principal -->
+        <script src="scripts/script.js"></script>
+    </body>
 </html>
