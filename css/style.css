@@ -102,6 +102,7 @@ main {
     flex-direction: column;
     height: auto;
     max-height: 50px;
+    max-width: 200px;
     cursor: pointer;
     border-radius: 11px;
     background: #FFF;

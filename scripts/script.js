@@ -13,4 +13,6 @@ function updateRecettesNumber (number) {
     document.querySelector('.numberOfResults').textContent = number
 }
 
+// console.log(recipes)
 displayRecettes(recipes)
+selectTemplate(recipes)
