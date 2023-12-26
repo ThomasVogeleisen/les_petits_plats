@@ -217,6 +217,10 @@ main {
     margin: 13px 0 0 0;
 }
 
+.dropdown-element-hidden {
+    display: none;
+}
+
 .dropdown-element:hover {
     font-weight: 700;
 }
@@ -249,6 +253,10 @@ main {
 
 .close-tag-btn {
     cursor: pointer;
+}
+
+.tag-hidden {
+    display: none;
 }
 
 /* RECETTES */
