@@ -26,6 +26,8 @@ function selectTemplate (recettesListe) {
         option.textContent = liste.ustensiles[i]
         ustensilesList.appendChild(option)
     }
+    // Création d'un event listener sur les boutons de tri
+    createEventSelect()
 }
 
 // CREATION D'UN EVENT LISTENER SUR LES BOUTONS DE TRI

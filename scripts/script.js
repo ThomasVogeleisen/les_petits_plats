@@ -5,8 +5,6 @@ function init () {
     displayRecettes(recettesListe)
     // Affiche les selects
     selectTemplate(recettesListe)
-    // Création d'un event listener sur les boutons de tri
-    createEventSelect()
 }
 
 // Affiche toutes les recettes
@@ -17,12 +15,7 @@ function displayRecettes (liste) {
         blocRecettes.appendChild(nouvelleRecette)
     })
     // Met à jour le nombre de recettes
-    updateRecettesNumber(liste.length)
-}
-
-// Mise a jour du nombre de recettes
-function updateRecettesNumber (number) {
-    document.querySelector('.numberOfResults').textContent = number
+    document.querySelector('.numberOfResults').textContent = liste.length
 }
 
 init()
