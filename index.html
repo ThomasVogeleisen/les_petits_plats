@@ -20,7 +20,7 @@
                     <label for="search-bar"></label>
                     <input type="text" id="search-bar" placeholder="Rechercher une recette, un ingrédient, ...">
                     <input class="btn-search" type="submit" value="">
-                    <img class="search-close-btn" src="../assets/icons/close.svg" alt="search icone">
+                    <img class="search-close-btn search-close-btn-hidden" src="../assets/icons/close.svg" alt="search icone">
                 </form>
             </div>
         </header>
@@ -35,9 +35,7 @@
                         <img class="dropdown-search-icon" src="../assets/icons/dopdown-loupe.svg" alt="search icone">
                         <img class="dropdown-close-icon" src="../assets/icons/close.svg" alt="search icone">
                         <!-- tag list -->
-                        <!-- <div class="dropdown-element-tag-list">
-                            <p class="dropdown-element-tag">lorem<img class="dropdown-element-tag-close-btn" src="../assets/icons/close-tag-black.svg" alt="delete tag"></p>
-                        </div> -->
+                        <div class="dropdown-element-tag-list"></div>
                         <!-- element list -->
                         <div id="ingredients-list" class="dropdown-element-list">
                         </div>
@@ -49,9 +47,7 @@
                         <img class="dropdown-search-icon" src="../assets/icons/dopdown-loupe.svg" alt="search icone">
                         <img class="dropdown-close-icon" src="../assets/icons/close.svg" alt="search icone">
                         <!-- tag list -->
-                        <!-- <div class="dropdown-element-tag-list">
-                            <p class="dropdown-element-tag">lorem<img class="dropdown-element-tag-close-btn" src="../assets/icons/close-tag-black.svg" alt="delete tag"></p>
-                        </div> -->
+                        <div class="dropdown-element-tag-list"></div>
                         <!-- element list -->
                         <div id="appareils-list" class="dropdown-element-list">
                         </div>
@@ -63,21 +59,16 @@
                     <img class="dropdown-search-icon" src="../assets/icons/dopdown-loupe.svg" alt="search icone">
                     <img class="dropdown-close-icon" src="../assets/icons/close.svg" alt="search icone">
                     <!-- tag list -->
-                    <div class="dropdown-element-tag-list">
-                        <!-- <p class="dropdown-element-tag">lorem<img class="dropdown-element-tag-close-btn" src="../assets/icons/close-tag-black.svg" alt="delete tag"></p> -->
-                    </div>
+                    <div class="dropdown-element-tag-list"></div>
                     <!-- element list -->
-                    <div id="ustensiles-list" class="dropdown-element-list">
-                    </div>
+                    <div id="ustensiles-list" class="dropdown-element-list"></div>
                 </div>
                 <!-- number of recipes -->
                 <p class="nb-recettes"><span class="numberOfResults">00</span> recettes</p>
             </section>
 
             <!-- TAGS -->
-            <section class="tags-filter">
-                <!-- <p class="tags-item">lorem <img class="close-tag-btn" src="../assets/icons/close-tag.svg" alt="search icone"></p> -->
-            </section>
+            <section class="tags-filter"></section>
 
             <!-- SECTION RECETTES -->
             <section class="bloc-recettes">
@@ -86,6 +77,8 @@
         <!-- SCRIPS -->
         <!-- Liste des recettes -->
         <script src="scripts/recettes/recettes.js"></script>
+        <!-- ALGORITHME DE RECHERCHE -->
+        <script src="scripts/algorithme/algoRecherche.js"></script>
         <!-- Templates -->
         <script src="scripts/templates/ficheRecette.js"></script>
         <script src="scripts/templates/select.js"></script>

@@ -4,6 +4,11 @@ function selectTemplate (recettesListe) {
     const ingredientsList = document.querySelector('#ingredients-list')
     const appareilsList = document.querySelector('#appareils-list')
     const ustensilesList = document.querySelector('#ustensiles-list')
+
+    // EFFACER LES LISTES
+    ingredientsList.innerHTML = ''
+    appareilsList.innerHTML = ''
+    ustensilesList.innerHTML = ''
     
     // Affiche Liste ingredients
     for (let i = 0; i < liste.ingredients.length; i++) {
@@ -27,11 +32,11 @@ function selectTemplate (recettesListe) {
         ustensilesList.appendChild(option)
     }
     // Création d'un event listener sur les boutons de tri
-    createEventSelect()
+    createEventSelect(recettesListe)
 }
 
 // CREATION D'UN EVENT LISTENER SUR LES BOUTONS DE TRI
-function createEventSelect() {
+function createEventSelect(recettesListe) {
     const searchIngredients = document.querySelector('#search-ingredients')
     const searchAppareils = document.querySelector('#search-appareils')
     const searchUstensils = document.querySelector('#search-ustensils')
@@ -40,7 +45,7 @@ function createEventSelect() {
     clearSearch(searchIngredients, searchAppareils, searchUstensils)
 
     // Cree un event pour afficher les tags
-    createEventTags()
+    createEventTags(recettesListe)
 
     // Recherche par ingredients
     searchIngredients.addEventListener('input', (event) => {
@@ -67,10 +72,8 @@ function createEventSelect() {
         // supprimer les appareils qui ne correspondent pas
         for (let i = 0; i < appareils.length; i++) {
             if (appareils[i].textContent.toLowerCase().includes(event.target.value.toLowerCase()) && appareils[i].classList.contains('tag-hidden') === false) {
-                // appareils[i].classList.remove('.dropdown-element-hidden')
                 appareils[i].style.display = 'block'
             } else {
-                // appareils[i].classList.add('.dropdown-element-hidden')
                 appareils[i].style.display = 'none'
             }
         }
@@ -99,7 +102,7 @@ function clearSearch(searchIngredients, searchAppareils, searchUstensils) {
     const searchList = [searchIngredients, searchAppareils, searchUstensils]
 
     for (let i = 0; i < clearSearch.length; i++) {
-        clearSearch[i].addEventListener('click', (event) => {
+        clearSearch[i].addEventListener('click', () => {
             searchList[i].value = ''
             searchList[i].dispatchEvent(new Event('input'))
             searchList[i].focus()
@@ -108,13 +111,24 @@ function clearSearch(searchIngredients, searchAppareils, searchUstensils) {
 }
 
 // CREE UN EVENTLISTER SUR LES TOUS ELEMENTS DE LA LISTE POUR CREER UN TAG
-function createEventTags() {
+function createEventTags(recettesListe) {
     const elements = document.querySelectorAll('.dropdown-element')
     elements.forEach(element => {
         element.addEventListener('click', (event) => {
 
             // CREE LE TAG
-            tagTemplate(event.target.textContent)
+            tagTemplate(event.target.textContent, recettesListe)
+
+            // Lancer la recherche
+            search()
+
+            // vider la zone de recherche
+            const searchInput = document.querySelectorAll('.dropdown-search-bar')
+            searchInput.forEach(search => {
+                search.value = ''
+                // search.dispatchEvent(new Event('input'))
+            })
+
 
             // MASQUER L'ELEMENT DANS LA LISTE
             element.classList.add('tag-hidden')

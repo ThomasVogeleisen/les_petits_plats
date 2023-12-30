@@ -23,5 +23,19 @@ function selectsListFactory (listeRecettes) {
             liste.appareils.push(recette.appliance.toLowerCase())
         }
     })
+
+    // Enlever les elements qui sont en tags
+    const tags = getTags()
+    tags.forEach(tag => {
+        if (liste.ingredients.includes(tag)) {
+            liste.ingredients.splice(liste.ingredients.indexOf(tag), 1)
+        }
+        if (liste.ustensiles.includes(tag)) {
+            liste.ustensiles.splice(liste.ustensiles.indexOf(tag), 1)
+        }
+        if (liste.appareils.includes(tag)) {
+            liste.appareils.splice(liste.appareils.indexOf(tag), 1)
+        }
+    })
     return liste
 }

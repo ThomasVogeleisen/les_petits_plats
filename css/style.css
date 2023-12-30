@@ -71,12 +71,15 @@ h1 {
 }
 
 .search-close-btn {
-    display: none;
     position: absolute;
     width: 13px;
     top: 60px;
     right: 85px;
     cursor: pointer;
+}
+
+.search-close-btn-hidden {
+    display: none;
 }
 
 .btn-search:hover {

@@ -1,5 +1,5 @@
 // TEMPLATE TAGS
-function tagTemplate(tagName) {
+function tagTemplate(tagName, recettesListe) {
     const tagsContainer = document.querySelector('.tags-filter')
 
     // Creation d'un tag
@@ -25,6 +25,9 @@ function tagTemplate(tagName) {
                 item.style.display = 'block'
             }
         })
+
+        // Lance la recherche
+        search()
         
     })
 }
