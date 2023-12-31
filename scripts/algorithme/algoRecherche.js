@@ -6,7 +6,7 @@ function algoRechercheBoucles(recipes, search, tags) {
     // RECHERCHE EN FONCTION DES DONNEES FOURNIES
     if (search.length > 2 && tags.length === 0) {
         // Recherche avec la barre de recherche
-        // result = searchBySearchBar(recipes, search)
+        result = searchBySearchBar(recipes, search)
     
     } else if (search.length <= 2 && tags.length > 0) {
         // Recherche avec les tags
@@ -14,7 +14,7 @@ function algoRechercheBoucles(recipes, search, tags) {
     
     } else if (search.length > 2 && tags.length > 0) {
         // recherche avec les tags et la barre de recherche
-        // result = searchBySearchBar(recipes, search)
+        result = searchBySearchBar(recipes, search)
         result = searchByTags(result, tags)
     
     } else {
@@ -52,27 +52,21 @@ function algoRechercheBoucles(recipes, search, tags) {
         return resultByTags
     }
 
-    // // Recherche avec la barre de recherche
-    // // ALGORYTHME DE RECHERCHE AVEC BOUCLES FOR
-    // function searchBySearchBar(recipes, search) {
-    //     const resultBySearchBar = []
+    // Recherche avec la barre de recherche
+    // ALGORYTHME DE RECHERCHE AVEC METHODES D'OBEJTS ARRAY
+    function searchBySearchBar(recipes, search) {
 
-    //     // Recherche dans le nom, la description et les ingredients avec des boucles for
-    //     for (let i = 0; i < recipes.length; i++) {
-    //         if (recipes[i].name.toLowerCase().includes(search.toLowerCase())) {
-    //             resultBySearchBar.push(recipes[i])
-    //         } else if (recipes[i].description.toLowerCase().includes(search.toLowerCase())) {
-    //             resultBySearchBar.push(recipes[i])
-    //         } else {
-    //             for (let j = 0; j < recipes[i].ingredients.length; j++) {
-    //                 if (recipes[i].ingredients[j].ingredient.toLowerCase().includes(search.toLowerCase())) {
-    //                     resultBySearchBar.push(recipes[i])
-    //                 }
-    //             }
-    //         }
-    //     }
-    //     return resultBySearchBar
-    // }
+        // Recherche dans le nom, la description et les ingredients avec les methodes d'objets array
+        const resultBySearchBar = recipes.filter(recipe => {
+            return recipe.name.toLowerCase().includes(search.toLowerCase()) ||
+                recipe.description.toLowerCase().includes(search.toLowerCase()) ||
+                recipe.ingredients.some(ingredient => {
+                    return ingredient.ingredient.toLowerCase().includes(search.toLowerCase())
+                })
+        })
+        
+        return resultBySearchBar
+    }
 
     return result
 }
