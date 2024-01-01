@@ -111,13 +111,13 @@ function clearSearch(searchIngredients, searchAppareils, searchUstensils) {
 }
 
 // CREE UN EVENTLISTER SUR LES TOUS ELEMENTS DE LA LISTE POUR CREER UN TAG
-function createEventTags(recettesListe) {
+function createEventTags() {
     const elements = document.querySelectorAll('.dropdown-element')
     elements.forEach(element => {
         element.addEventListener('click', (event) => {
 
             // CREE LE TAG
-            tagTemplate(event.target.textContent, recettesListe)
+            tagTemplate(event.target.textContent, event.target.parentNode.parentNode.children[4].id)
 
             // Lancer la recherche
             search()
@@ -126,9 +126,7 @@ function createEventTags(recettesListe) {
             const searchInput = document.querySelectorAll('.dropdown-search-bar')
             searchInput.forEach(search => {
                 search.value = ''
-                // search.dispatchEvent(new Event('input'))
             })
-
 
             // MASQUER L'ELEMENT DANS LA LISTE
             element.classList.add('tag-hidden')
