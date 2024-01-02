@@ -262,6 +262,22 @@ main {
     display: none;
 }
 
+/* Aucune recette trouvée */
+.no-result {
+    margin: 0 24px 30px 24px;
+    color: var(--Black);
+    font-family: Manrope;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 150px;
+    text-align: center;
+}
+
+.no-result-hidden {
+    display: none;
+    font-weight: 800;
+}
+
 /* RECETTES */
 .bloc-recettes{
     display: flex;

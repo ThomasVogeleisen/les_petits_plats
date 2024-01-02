@@ -10,6 +10,7 @@ function init () {
     searchInput.addEventListener('input', () => {
         displayClearSearchBar(getSearchBar().length)
         search()
+        displayError()
     })
 }
 
@@ -85,6 +86,20 @@ function displayClearSearchBar(searchBarLength) {
         clearButton.classList.add('search-close-btn-hidden')
     } else {
         clearButton.classList.remove('search-close-btn-hidden')
+    }
+}
+
+// AFFICHER MESSAGE D'ERREUR
+function displayError() {
+    const blocErreur = document.querySelector('.no-result')
+    const errorMessage = document.getElementById('searchValue')
+    const numberOfResults = document.querySelector('.numberOfResults').textContent
+    console.log(getSearchBar().length)
+    console.log(numberOfResults)
+    if (getSearchBar().length > 2 && numberOfResults < 1) {
+        blocErreur.classList.remove('no-result-hidden')
+    } else {
+        blocErreur.classList.add('no-result-hidden')
     }
 }
 
