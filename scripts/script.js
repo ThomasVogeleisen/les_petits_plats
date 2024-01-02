@@ -94,10 +94,9 @@ function displayError() {
     const blocErreur = document.querySelector('.no-result')
     const errorMessage = document.getElementById('searchValue')
     const numberOfResults = document.querySelector('.numberOfResults').textContent
-    console.log(getSearchBar().length)
-    console.log(numberOfResults)
     if (getSearchBar().length > 2 && numberOfResults < 1) {
         blocErreur.classList.remove('no-result-hidden')
+        errorMessage.textContent = getSearchBar()
     } else {
         blocErreur.classList.add('no-result-hidden')
     }
