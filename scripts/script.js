@@ -3,7 +3,7 @@ function init () {
     displayRecettes(getRecettes())
     // Affiche les selects
     selectTemplate(getRecettes())
-    // Bouton de suppression de la recherche
+    // Bouton de suppression de la recherche principale
     clearSearchBar()
     // Demarre la recherche
     const searchInput = document.querySelector('#search-bar')
@@ -101,7 +101,5 @@ function displayError() {
         blocErreur.classList.add('no-result-hidden')
     }
 }
-
-
 
 init()
