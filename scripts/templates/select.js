@@ -71,8 +71,6 @@ function createEventSelect(recettesListe) {
     // Recherche par appareils
     searchAppareils.addEventListener('input', (event) => {
 
-        console.log("searchAppareils.addEventListener")
-
         // Bouton de suppresion de la recherche des filtres
         DisplayDeleteButtonSelect()
 

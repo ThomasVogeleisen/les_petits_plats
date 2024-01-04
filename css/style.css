@@ -380,3 +380,63 @@ main {
     font-family: Manrope;
     font-size: 14px;
 }
+
+/* RESPONSIVE */
+@media screen and (max-width: 1320px) {
+    .bloc-recettes{
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 970px) {
+    header {
+        height: 500px;
+    }
+    .bloc-logo {
+        padding: 51px 0 50px 69px;
+    }
+    .nb-recettes {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 832px) {
+    header {
+        height: 300px;
+    }
+    .bloc-logo {
+        padding: 15px 0 15px 15px
+    }
+    h1 {
+        font-size: 30px;
+    }
+    .nb-recettes {
+        display: none;
+    }
+    .filtres {
+        display: none;
+    }
+    .bloc-search-bar {
+        max-width: 90%;
+    }
+    .btn-search {
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .bloc-logo img {
+        height: 20px;
+        width: auto;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    .bloc-search-bar{
+        margin-left: 15px;
+    }
+    header {
+        height: 270px;
+    }
+}
