@@ -1,5 +1,5 @@
 // ALGORITHME DE RECHERCHE AVEC BOUCLES
-function algoRechercheBoucles(recipes, search, tags) {
+function algoRechercheArray(recipes, search, tags) {
 
     let result = []
 

@@ -47,7 +47,7 @@ function getRecettes() {
 
 // Recherche des recettes
 function search() {
-    const listeRecetteFiltree = algoRechercheBoucles(getRecettes(), getSearchBar(), getTags())
+    const listeRecetteFiltree = algoRechercheArray(getRecettes(), getSearchBar(), getTags())
     displayRecettes(listeRecetteFiltree)
     selectTemplate(listeRecetteFiltree)
 }
