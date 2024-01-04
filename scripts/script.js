@@ -3,13 +3,14 @@ function init () {
     displayRecettes(getRecettes())
     // Affiche les selects
     selectTemplate(getRecettes())
-    // Bouton de suppression de la recherche
+    // Bouton de suppression de la recherche principale
     clearSearchBar()
     // Demarre la recherche
     const searchInput = document.querySelector('#search-bar')
     searchInput.addEventListener('input', () => {
         displayClearSearchBar(getSearchBar().length)
         search()
+        displayError()
     })
 }
 
@@ -88,6 +89,17 @@ function displayClearSearchBar(searchBarLength) {
     }
 }
 
-
+// AFFICHER MESSAGE D'ERREUR
+function displayError() {
+    const blocErreur = document.querySelector('.no-result')
+    const errorMessage = document.getElementById('searchValue')
+    const numberOfResults = document.querySelector('.numberOfResults').textContent
+    if (getSearchBar().length > 2 && numberOfResults < 1) {
+        blocErreur.classList.remove('no-result-hidden')
+        errorMessage.textContent = getSearchBar()
+    } else {
+        blocErreur.classList.add('no-result-hidden')
+    }
+}
 
 init()

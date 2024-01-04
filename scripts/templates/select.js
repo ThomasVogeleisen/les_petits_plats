@@ -1,5 +1,6 @@
 // AFFICHE LES SELECTS
 function selectTemplate (recettesListe) {
+
     liste = selectsListFactory(recettesListe)
     const ingredientsList = document.querySelector('#ingredients-list')
     const appareilsList = document.querySelector('#appareils-list')
@@ -37,6 +38,7 @@ function selectTemplate (recettesListe) {
 
 // CREATION D'UN EVENT LISTENER SUR LES BOUTONS DE TRI
 function createEventSelect(recettesListe) {
+
     const searchIngredients = document.querySelector('#search-ingredients')
     const searchAppareils = document.querySelector('#search-appareils')
     const searchUstensils = document.querySelector('#search-ustensils')
@@ -49,6 +51,9 @@ function createEventSelect(recettesListe) {
 
     // Recherche par ingredients
     searchIngredients.addEventListener('input', (event) => {
+
+        // Bouton de suppresion de la recherche des filtres
+        DisplayDeleteButtonSelect()
 
         // Recuperer la liste des ingredients
         const ingredients = document.querySelectorAll('#ingredients-list .dropdown-element')
@@ -66,6 +71,9 @@ function createEventSelect(recettesListe) {
     // Recherche par appareils
     searchAppareils.addEventListener('input', (event) => {
 
+        // Bouton de suppresion de la recherche des filtres
+        DisplayDeleteButtonSelect()
+
         // Recuperer la liste des appareils
         const appareils = document.querySelectorAll('#appareils-list .dropdown-element')
 
@@ -81,6 +89,9 @@ function createEventSelect(recettesListe) {
 
     // Recherche par ustensiles
     searchUstensils.addEventListener('input', (event) => {
+
+        // Bouton de suppresion de la recherche des filtres
+        DisplayDeleteButtonSelect()
 
         // Recuperer la liste des ustensiles
         const ustensils = document.querySelectorAll('#ustensiles-list .dropdown-element')
@@ -111,13 +122,13 @@ function clearSearch(searchIngredients, searchAppareils, searchUstensils) {
 }
 
 // CREE UN EVENTLISTER SUR LES TOUS ELEMENTS DE LA LISTE POUR CREER UN TAG
-function createEventTags(recettesListe) {
+function createEventTags() {
     const elements = document.querySelectorAll('.dropdown-element')
     elements.forEach(element => {
         element.addEventListener('click', (event) => {
 
             // CREE LE TAG
-            tagTemplate(event.target.textContent, recettesListe)
+            tagTemplate(event.target.textContent, event.target.parentNode.parentNode.children[4].id)
 
             // Lancer la recherche
             search()
@@ -126,13 +137,23 @@ function createEventTags(recettesListe) {
             const searchInput = document.querySelectorAll('.dropdown-search-bar')
             searchInput.forEach(search => {
                 search.value = ''
-                // search.dispatchEvent(new Event('input'))
             })
-
 
             // MASQUER L'ELEMENT DANS LA LISTE
             element.classList.add('tag-hidden')
             element.style.display = 'none'
         })
     })
+}
+
+// Affiche le bouton de suppression des filtres
+function DisplayDeleteButtonSelect() {
+    const deleteButtonSelect = document.querySelectorAll('.dropdown-close-icon')
+    const searchBarSelect = document.querySelectorAll('.dropdown-search-bar')
+
+    for (let i = 0; i < searchBarSelect.length; i++) {
+        searchBarSelect[i].value.length > 0
+            ? deleteButtonSelect[i].classList.remove('search-close-btn-hidden')
+            : deleteButtonSelect[i].classList.add('search-close-btn-hidden')
+    }
 }

@@ -33,42 +33,45 @@
                         <h2 class="dropdown-title">Ingrédients <img class="dropdown-icon" src="assets/icons/dropdown_ico.svg" alt="dropdown icone"></h2>
                         <input id="search-ingredients" class="dropdown-search-bar" type="text">
                         <img class="dropdown-search-icon" src="../assets/icons/dopdown-loupe.svg" alt="search icone">
-                        <img class="dropdown-close-icon" src="../assets/icons/close.svg" alt="search icone">
+                        <img class="dropdown-close-icon search-close-btn-hidden" src="../assets/icons/close.svg" alt="search icone">
                         <!-- tag list -->
-                        <div class="dropdown-element-tag-list"></div>
+                        <div id="tag-ingredients-list" class="dropdown-element-tag-list"></div>
                         <!-- element list -->
-                        <div id="ingredients-list" class="dropdown-element-list">
-                        </div>
+                        <div id="ingredients-list" class="dropdown-element-list"></div>
                 </div>
                 <!-- Appareils -->
                 <div class="dropdown dropdown-appareils">
                         <h2 class="dropdown-title">Appareils <img class="dropdown-icon" src="assets/icons/dropdown_ico.svg" alt="dropdown icone"></h2>
                         <input id="search-appareils" class="dropdown-search-bar" type="text">
                         <img class="dropdown-search-icon" src="../assets/icons/dopdown-loupe.svg" alt="search icone">
-                        <img class="dropdown-close-icon" src="../assets/icons/close.svg" alt="search icone">
+                        <img class="dropdown-close-icon search-close-btn-hidden" src="../assets/icons/close.svg" alt="search icone">
                         <!-- tag list -->
-                        <div class="dropdown-element-tag-list"></div>
+                        <div id="tag-appareils-list" class="dropdown-element-tag-list"></div>
                         <!-- element list -->
-                        <div id="appareils-list" class="dropdown-element-list">
-                        </div>
+                        <div id="appareils-list" class="dropdown-element-list"></div>
                 </div>
                 <!-- Ustensils -->
                 <div class="dropdown dropdown-ustensils">
                     <h2 class="dropdown-title">Ustensils <img class="dropdown-icon" src="assets/icons/dropdown_ico.svg" alt="dropdown icone"></h2>
                     <input id="search-ustensils" class="dropdown-search-bar" type="text">
                     <img class="dropdown-search-icon" src="../assets/icons/dopdown-loupe.svg" alt="search icone">
-                    <img class="dropdown-close-icon" src="../assets/icons/close.svg" alt="search icone">
+                    <img class="dropdown-close-icon search-close-btn-hidden" src="../assets/icons/close.svg" alt="search icone">
                     <!-- tag list -->
-                    <div class="dropdown-element-tag-list"></div>
+                    <div id="tags-ustensils-list" class="dropdown-element-tag-list"></div>
                     <!-- element list -->
-                    <div id="ustensiles-list" class="dropdown-element-list"></div>
-                </div>
+                    <div id="ustensiles-list" class="dropdown-element-list"></div></div>
                 <!-- number of recipes -->
                 <p class="nb-recettes"><span class="numberOfResults">00</span> recettes</p>
             </section>
 
             <!-- TAGS -->
             <section class="tags-filter"></section>
+
+            <!-- Affichage Aucune recette correspond à votre critère… -->
+            <section class="no-result no-result-hidden">
+                <h2>Aucune recette ne contient '<span id="searchValue"></span>' vous pouvez chercher «
+                    tarte aux pommes », « poisson », etc.</h2>
+            </section>
 
             <!-- SECTION RECETTES -->
             <section class="bloc-recettes">
