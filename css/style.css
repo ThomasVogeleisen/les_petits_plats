@@ -239,13 +239,14 @@ main {
 }
 
 .tags-filter {
-    margin: 0 24px 30px 24px;
+    margin: 0 24px 0px 24px;
 }
 
 .tags-item {
     display: inline-flex;
     padding: 17px 18px;
     margin-right: 10px;
+    margin-bottom: -15px;
     align-items: center;
     gap: 60px;
     border-radius: 10px;
@@ -282,6 +283,7 @@ main {
 .bloc-recettes{
     display: flex;
     flex-wrap: wrap;
+    margin-top: 60px;
 }
 
 .recette-card {
