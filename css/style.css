@@ -132,12 +132,18 @@ main {
     left: 560px;
 }
 
+/* Style pour le dropdown lorsqu'il est survolé ou a le focus */
 .dropdown:hover, .dropdown:focus-within {
     max-height: 315px;
-    .dropdown-icon {
-        transform: rotate(180deg);
-    }
 }
+
+/* Style pour l'icône du dropdown lorsqu'il est survolé ou a le focus */
+.dropdown:hover .dropdown-icon,
+.dropdown:focus-within .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+
 
 .dropdown-title {
     padding: 17px 16px 0 16px;
@@ -203,11 +209,14 @@ main {
     transition: opacity 0.3s ease-in-out;
 }
 
+/* Style pour le tag dans le dropdown lorsqu'il est survolé */
 .dropdown-element-tag:hover {
     font-weight: 700;
-    .dropdown-element-tag-close-btn {
-        opacity: 1;
-    }
+}
+
+/* Style pour le bouton de fermeture du tag lorsqu'il est survolé */
+.dropdown-element-tag:hover .dropdown-element-tag-close-btn {
+    opacity: 1;
 }
 
 .dropdown-element-list {
@@ -332,7 +341,7 @@ main {
     font-weight: 400;
     margin-top: 32px;
     margin-bottom: 29px;
-    text-wrap: nowrap;
+    white-space: nowrap;
     overflow: hidden;
 }
 
