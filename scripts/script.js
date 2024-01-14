@@ -10,7 +10,6 @@ function init () {
     searchInput.addEventListener('input', () => {
         displayClearSearchBar(getSearchBar().length)
         search()
-        displayError()
     })
 }
 
@@ -50,6 +49,7 @@ function search() {
     const listeRecetteFiltree = algoRechercheBoucles(getRecettes(), getSearchBar(), getTags())
     displayRecettes(listeRecetteFiltree)
     selectTemplate(listeRecetteFiltree)
+    displayError()
 }
 
 // VIDER LES CHAMP DE RECHERCHE DES FILTRES
