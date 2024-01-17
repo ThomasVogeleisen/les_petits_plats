@@ -1,4 +1,6 @@
 function init () {
+    // Eviter le recharchement de la page au clic sur le bouton de rechecher
+    preventReload()
     // Affiche toutes les recettes au chargement de la page
     displayRecettes(getRecettes())
     // Affiche les selects
@@ -100,6 +102,14 @@ function displayError() {
     } else {
         blocErreur.classList.add('no-result-hidden')
     }
+}
+
+// Eviter le recharchement de la page au clic sur le bouton de rechecher
+function preventReload() {
+    const searchButton = document.querySelector('.btn-search')
+    searchButton.addEventListener('click', (event) => {
+        event.preventDefault()
+    })
 }
 
 init()
